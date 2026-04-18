@@ -16,7 +16,9 @@ jobs:
         python-version: "3.10"
 
     - name: Install dependencies
-      run: pip install yfinance
+      run: |
+        pip install yfinance pandas numpy
 
     - name: Run script
-      run: python stock.py
+      run: |
+        python -u stock.py
